@@ -1,0 +1,62 @@
+.shape-container {
+  display: flex;
+  justify-content: center;
+}
+
+.square,
+.triangle {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.shape {
+  display: none;
+  /* transform-box: fill-box;
+  transform-origin: center center;
+  */
+}
+
+.shape {
+  animation: 0.3s linear forwards;
+}
+
+.square .stateTriangle,
+.triangle .stateSquare {
+  opacity: 1;
+  display: none;
+  animation-name: shapeOut;
+}
+
+.triangle .stateTriangle,
+.square .stateSquare {
+  opacity: 0;
+  display: inline;
+  animation-name: shapeIn;
+}
+.triangle .stateTriangle,
+.square .stateSquare {
+  animation-delay: 50ms;
+}
+@keyframes shapeOut {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(100deg);
+    display: none;
+  }
+}
+@keyframes shapeIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-100deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+    display: inline;
+  }
+}

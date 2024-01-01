@@ -1,0 +1,8 @@
+.main-container {
+  width: 100%;
+  height: 90vh;
+  border: 2px solid black;
+  background-color: #0f0d0e;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,102 @@
+.state-container {
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  background-color: #12b5e5;
+  margin: 5px;
+  padding: 10px 20px;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+.state-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.final-state,
+.box {
+  background-color: #f9f4da;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 0 10px;
+  box-shadow: 2px 2px 2px #231f20;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.final-state-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shape {
+  display: none;
+  animation: 0.3s linear forwards;
+}
+
+.blue-triangle,
+.blue-square,
+.green-square,
+.green-square {
+  text-align: center;
+}
+
+.blue-triangle .state-square,
+.green-triangle .state-square,
+.blue-square .state-triangle,
+.green-square .state-triangle {
+  opacity: 1;
+  display: none;
+  animation-name: fadeOut;
+}
+
+.blue-triangle .state-triangle,
+.green-triangle .state-triangle,
+.blue-square .state-square,
+.green-square .state-square {
+  opacity: 0;
+  display: inline;
+  animation-name: fadeIn;
+  animation-delay: 50ms;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(100deg);
+    display: none;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-100deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+    display: inline;
+  }
+}
