@@ -16,13 +16,13 @@ export const StateContext = createContext<StateContextProps | undefined>(
 );
 
 export function useStateContext(): StateContextProps {
-  const selectedDiv = useContext(StateContext);
+  const stateContext = useContext(StateContext);
 
-  if (selectedDiv === undefined) {
+  if (stateContext === undefined) {
     throw new Error("StateContext must be inside a context provider");
   }
 
-  return selectedDiv;
+  return stateContext;
 }
 
 export default function StateProvider(props: StateProviderProps) {
@@ -33,7 +33,7 @@ export default function StateProvider(props: StateProviderProps) {
     SelectedShape: selectedShape,
     SelectedColor: selectedColor,
     setSelectedShape: setSelectedShape,
-    setSelectedColor:setSelectedColor,
+    setSelectedColor: setSelectedColor,
   };
 
   return (

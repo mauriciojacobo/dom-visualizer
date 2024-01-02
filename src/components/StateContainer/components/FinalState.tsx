@@ -1,8 +1,9 @@
-import { useStateContext } from "../../../context/StateContext";
 import GreenTriangle from "../../../assets/triangle.png";
 import BlueTriangle from "../../../assets/BlueTriangle.png";
 import GreenSquare from "../../../assets/GreenSquare.png";
 import BlueSquare from "../../../assets/BlueSquare.png";
+
+import { useStateContext } from "../../../context/StateContext";
 
 export default function FinalState() {
   const stateContext = useStateContext();
@@ -13,13 +14,23 @@ export default function FinalState() {
   return (
     <div className={` ${currentShapeColor}`}>
       <img
-        src={currentColor === "green" ? GreenTriangle : BlueTriangle}
-        className={`shape state-triangle state-${currentColor}`}
+        src={GreenTriangle}
+        className={`shape state-greentriangle `}
         width="70px"
       />
       <img
-        src={currentColor === "green" ? GreenSquare : BlueSquare}
-        className={`shape state-square state-${currentColor}`}
+        src={BlueTriangle}
+        className={`shape state-bluetriangle `}
+        width="70px"
+      />
+      <img
+        src={ GreenSquare }
+        className={`shape state-greensquare `}
+        width="55px"
+      />
+      <img
+        src={ BlueSquare }
+        className={`shape state-bluesquare `}
         width="55px"
       />
     </div>

@@ -1,12 +1,12 @@
 .state-container {
   display: flex;
   flex-direction: row;
+  border: 2px dashed #fefefe;
   border-radius: 25px;
-  background-color: #12b5e5;
-  margin: 5px;
-  padding: 10px 20px;
-  width: 50%;
-  justify-content: space-evenly;
+  margin: 10px;
+  padding: 10px 10px;
+  width: 25%;
+  justify-content: space-between;
 }
 
 .state-boxes {
@@ -59,19 +59,27 @@
   text-align: center;
 }
 
-.blue-triangle .state-square,
-.green-triangle .state-square,
-.blue-square .state-triangle,
-.green-square .state-triangle {
+.blue-triangle .state-bluesquare,
+.blue-triangle .state-greensquare,
+.blue-triangle .state-greentriangle,
+.green-triangle .state-bluesquare,
+.green-triangle .state-greensquare,
+.green-triangle .state-bluetriangle,
+.blue-square .state-bluetriangle,
+.blue-square .state-greentriangle,
+.blue-square .state-greensquare,
+.green-square .state-bluetriangle,
+.green-square .state-greentriangle,
+.green-square .state-bluesquare {
   opacity: 1;
   display: none;
   animation-name: fadeOut;
 }
 
-.blue-triangle .state-triangle,
-.green-triangle .state-triangle,
-.blue-square .state-square,
-.green-square .state-square {
+.blue-triangle .state-bluetriangle,
+.green-triangle .state-greentriangle,
+.blue-square .state-bluesquare,
+.green-square .state-greensquare {
   opacity: 0;
   display: inline;
   animation-name: fadeIn;
