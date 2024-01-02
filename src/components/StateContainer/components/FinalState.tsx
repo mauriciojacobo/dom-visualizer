@@ -1,19 +1,26 @@
 import { useStateContext } from "../../../context/StateContext";
 import GreenTriangle from "../../../assets/triangle.png";
 import BlueTriangle from "../../../assets/BlueTriangle.png";
+import GreenSquare from "../../../assets/GreenSquare.png";
+import BlueSquare from "../../../assets/BlueSquare.png";
 
 export default function FinalState() {
   const stateContext = useStateContext();
-  const currentShapeColor = `${stateContext.SelectedColor}-${stateContext.SelectedShape}`;
+  const currentShape = stateContext.SelectedShape;
+  const currentColor = stateContext.SelectedColor;
+
+  const currentShapeColor = `${currentColor}-${currentShape}`;
   return (
     <div className={` ${currentShapeColor}`}>
       <img
-        src={
-          stateContext.SelectedColor === "Blue" ? BlueTriangle : GreenTriangle
-        }
-        alt=""
-        className="shape state-triangle"
-        width="80px"
+        src={currentColor === "green" ? GreenTriangle : BlueTriangle}
+        className={`shape state-triangle state-${currentColor}`}
+        width="70px"
+      />
+      <img
+        src={currentColor === "green" ? GreenSquare : BlueSquare}
+        className={`shape state-square state-${currentColor}`}
+        width="55px"
       />
     </div>
   );

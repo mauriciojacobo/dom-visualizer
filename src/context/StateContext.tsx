@@ -4,7 +4,7 @@ type StateContextProps = {
   SelectedColor: string;
   SelectedShape: string;
   setSelectedShape: (_: string) => void;
-  setSececteColor: (_: string) => void;
+  setSelectedColor: (_: string) => void;
 };
 
 type StateProviderProps = {
@@ -33,7 +33,7 @@ export default function StateProvider(props: StateProviderProps) {
     SelectedShape: selectedShape,
     SelectedColor: selectedColor,
     setSelectedShape: setSelectedShape,
-    setSelectedColor: setSelectedColor,
+    setSelectedColor:setSelectedColor,
   };
 
   return (
