@@ -1,0 +1,129 @@
+.options-bar {
+  width: 100%;
+  /*background-color: #eefafa;*/
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 0 5px;
+}
+
+.state-options {
+  height: fit-content;
+  /*width: 25%;*/
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 5px 3px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: start;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.state-options > h3 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding: 0 2px;
+}
+
+.state-options-container {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.shapes {
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  gap: 10px;
+}
+
+.shape-option {
+  margin: auto auto;
+  width: 80px;
+}
+
+.colors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.color-option {
+  height: 40px;
+  width: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px black;
+  transition: box-shadow 0.2s ease;
+}
+
+.color-option:hover {
+  box-shadow: 1.5px 0.5px 3px black;
+}
+
+.light-option-box:hover {
+  background-color: #ffffff;
+}
+
+.dark-option-box:hover {
+  background-color: #9399b2;
+}
+
+.color-box {
+  height: fit-content;
+  padding: 0 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.sep {
+  margin: 0 2px;
+  width: 5px;
+}
+
+.sep > img {
+  height: 90px;
+  width: 20px;
+}
+
+.option-box {
+  border-radius: 10px;
+  padding: 0 10px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease-in-out,
+    border 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.dark-option-box {
+  background-color: #7f849c;
+  border: 2px solid #b4befe;
+  box-shadow: 2px 3px 2px #bac2de;
+}
+
+.light-option-box {
+  background-color: #f5e0dc;
+  border: 2px solid black;
+  box-shadow: 2px 3px 2px black;
+}
+
+.light-state-options {
+  color: #0f0d0e;
+  background-color: #ffffff;
+  border: 2px dashed black;
+}
+
+.dark-state-options {
+  color: #ffffff;
+  background-color: #45475a;
+  border: 2px dashed #ffffff;
+}

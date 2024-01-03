@@ -1,0 +1,66 @@
+.color-container {
+  display: flex;
+  justify-content: center;
+}
+
+.blue,
+.green {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.color {
+  display: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+
+  /* transform-box: fill-box;
+  transform-origin: center center;
+  */
+}
+
+.color {
+  animation: 0.3s linear forwards;
+}
+
+.blue .stateGreen,
+.green .stateBlue {
+  opacity: 1;
+  display: none;
+  animation-name: colorOut;
+}
+
+.green .stateGreen,
+.blue .stateBlue {
+  opacity: 0;
+  display: inline;
+  animation-name: colorIn;
+}
+.green .stateTriangle,
+.blue .stateSquare {
+  animation-delay: 50ms;
+}
+@keyframes colorOut {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(100deg);
+    display: none;
+  }
+}
+@keyframes colorIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-100deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+    display: inline;
+  }
+}

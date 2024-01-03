@@ -19,17 +19,26 @@
 
 .final-state,
 .box {
-  background-color: #f9f4da;
-  border: 3px solid black;
   border-radius: 10px;
   padding: 0 10px;
-  box-shadow: 2px 2px 2px #231f20;
   width: 100px;
   height: 100px;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
+}
+
+.light-box {
+  background-color: #f9f4da;
+  border: 3px solid black;
+  box-shadow: 2px 2px 2px #231f20;
+}
+
+.dark-box {
+  background-color: #7f849c;
+  border: 2px solid #b4befe;
+  box-shadow: 2px 3px 2px #bac2de;
 }
 
 .final-state-wrapper {
