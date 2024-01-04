@@ -38,6 +38,7 @@
 .square .stateSquare {
   animation-delay: 50ms;
 }
+
 @keyframes shapeOut {
   0% {
     opacity: 1;
@@ -49,6 +50,7 @@
     display: none;
   }
 }
+
 @keyframes shapeIn {
   0% {
     opacity: 0;

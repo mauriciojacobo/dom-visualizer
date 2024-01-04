@@ -1,0 +1,29 @@
+.ctx-container {
+  display: flex;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px 10px;
+  justify-content: space-between;
+  transition:
+    background-color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+}
+
+.light-ctx-container {
+  color: #0f0d0e;
+  border: 2px dashed black;
+  background-color: #ffffff80;
+}
+
+.dark-ctx-container {
+  color: #ffffff;
+  border: 2px dashed #ffffff;
+  background-color: #45475a80;
+}
+
+.ctx-dashboard {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 6;
+  gap: 0;
+}

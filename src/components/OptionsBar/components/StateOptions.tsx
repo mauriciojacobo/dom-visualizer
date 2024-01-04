@@ -2,21 +2,21 @@ import SquareShape from "../../../assets/square-shape.png";
 import TriangleShape from "../../../assets/triangle-shape.png";
 import Blue from "../../../assets/bluecolor.png";
 import Green from "../../../assets/greencolor.png";
-
 import { useStateContext } from "../../../context/StateContext";
 
 type StateOptionsProps = {
     theme:string,
-}
+};
 
 export default function StateOptions(props:StateOptionsProps) {
   const stateContext = useStateContext();
   const theme = props.theme;
   return (
+  <>
     <div className={`state-options ${theme}-state-options`}>
     <h3>Cambia el estado</h3>
     <div className="state-options-container">      
-    <div className="shapes option">
+    <div className="shapes ">
         <div className={`option-box ${theme}-option-box`} onClick={() => stateContext.setSelectedShape("square")}>
           <img src={SquareShape} className="shape-option" />
         </div>
@@ -25,7 +25,7 @@ export default function StateOptions(props:StateOptionsProps) {
         </div>
       </div>
 
-      <div className="colors option">
+      <div className="colors ">
         <div className="color-box" 
             onClick={() => stateContext.setSelectedColor("green")} >
           <img
@@ -33,7 +33,8 @@ export default function StateOptions(props:StateOptionsProps) {
             className="color-option"
           />
         </div>
-        <div className="color-box" onClick={() => stateContext.setSelectedColor("blue")}>
+        <div className="color-box" 
+            onClick={() => stateContext.setSelectedColor("blue")}>
           <img
             src={Blue}
             className="color-option"
@@ -44,5 +45,6 @@ export default function StateOptions(props:StateOptionsProps) {
       </div>
 
     </div>
-  );
+</>
+);
 }

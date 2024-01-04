@@ -1,6 +1,5 @@
 .context-option-container {
   display: flex;
-  flex-direction: row;
   gap: 20px;
   margin: 5px 10px;
 }
@@ -8,22 +7,11 @@
 .language,
 .theme {
   display: flex;
-  flex-direction: row;
   height: 40px;
   width: 60px;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-}
-
-.dark-ctx-option {
-  border: 2px solid #b4befe;
-  background-color: #7f849c;
-}
-
-.light-ctx-option {
-  border: 1px solid #b4befe;
-  background-color: #cdd6f4;
 }
 
 .language:hover,
@@ -37,15 +25,4 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
-}
-
-.language > p,
-.theme > p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.context-option-container > h5 {
-  margin: 0 0;
-  padding: 0 0;
 }

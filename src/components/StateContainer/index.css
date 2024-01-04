@@ -1,12 +1,23 @@
 .state-container {
   display: flex;
-  flex-direction: row;
-  border: 2px dashed #fefefe;
-  border-radius: 25px;
+  flex-grow: 1;
+  border-radius: 15px;
   margin: 10px;
   padding: 10px 10px;
-  width: 25%;
   justify-content: space-between;
+  transition:
+    background-color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+}
+
+.light-state-container {
+  border: 2px dashed black;
+  background-color: #ffffff80;
+}
+
+.dark-state-container {
+  border: 2px dashed #ffffff;
+  background-color: #45475a80;
 }
 
 .state-boxes {
@@ -17,7 +28,6 @@
   gap: 10px;
 }
 
-.final-state,
 .box {
   border-radius: 10px;
   padding: 0 10px;
@@ -25,7 +35,6 @@
   height: 100px;
   display: flex;
   flex-direction: column;
-  align-content: center;
   justify-content: center;
 }
 
@@ -39,14 +48,6 @@
   background-color: #7f849c;
   border: 2px solid #b4befe;
   box-shadow: 2px 3px 2px #bac2de;
-}
-
-.final-state-wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
 }
 
 .arrow {

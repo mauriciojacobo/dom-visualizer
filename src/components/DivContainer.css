@@ -1,9 +1,0 @@
-.new-div {
-  background-color: var(--color-bg-dimmed);
-  border-color: var(--color-primary);
-  width: fit-content;
-  border: 1px solid black;
-  border-radius: 30px;
-  flex-grow: 1;
-  margin: 3px;
-}

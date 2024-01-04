@@ -1,6 +1,6 @@
 import "./ShapeState.css";
-import TriangleShape from "../assets/triangle-shape.png";
-import SquareShape from "../assets/square-shape.png";
+import TriangleShape from "../../../assets/triangle-shape.png";
+import SquareShape from "../../../assets/square-shape.png";
 
 type ShapeStateProps = {
   currentShape: string;

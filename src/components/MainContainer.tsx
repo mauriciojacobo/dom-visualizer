@@ -3,6 +3,7 @@ import StateContainer from "./StateContainer";
 import OptionsBar from "./OptionsBar";
 import { useCtxContext } from "../context/CtxContext";
 import "./MainContainer.css";
+import CtxContainer from "./CtxContainer";
 
 export default function MainContainer() {
   const ctxContext = useCtxContext();
@@ -14,7 +15,10 @@ export default function MainContainer() {
         <h4 className="consumer-heading">Theme context consumer</h4>
         <div className={`main-container ${colorScheme}-main-container`}>
           <OptionsBar />
-          <StateContainer />
+          <div className="dashboard">
+            <StateContainer />
+            <CtxContainer />
+          </div>
         </div>
       </div>
     </StateProvider>
